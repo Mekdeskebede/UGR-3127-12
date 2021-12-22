@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.laygrid{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 50px 100px 1fr 50px;
+    grid-template-areas: 
+    "heads  heads"
+    "edu work "
+    "txt  txt2"
+    "foots foots";
+    grid-gap: 5px;
+}
+
+#heads{
+    grid-area: heads;
+    background-color:cadetblue;
+}
+
+.navig{
+    display: flex;
+   
+}
+nav div a{
+    text-decoration: none;
+    color: rgb(7, 8, 8);
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
+}
+
+nav div a:hover {
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+nav div a.active{
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+
+#edu{
+    grid-area: edu;
+    background-color: rgba(190, 158, 158, 0.801);
+    border-top-right-radius:1em ;
+    border-top-left-radius:1em ;
+    margin-left: 1em;
+    transform: scale(1);
+    transition: .4s ease-in-out;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+#edu:hover{
+    transform: scale(1.1);
+}
+
+#edu h2 {
+    text-align: center;
+}
+#work{
+    grid-area: work;
+    background-color: rgba(105, 98, 91, 0.719);
+    border-top-right-radius:1em ;
+    border-top-left-radius:1em ;
+    margin-left: 1em;
+    transform: scale(1);
+    transition: .4s ease-in-out;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+#work:hover{
+    transform: scale(1.1);
+}
+#work h2 {
+    text-align: center;
+}
+
+
+#txt{
+    grid-area: txt;
+    background-color: rgba(117, 96, 96, 0.863);
+    margin-left: 1em;
+    border-bottom-right-radius:1em ;
+    border-bottom-left-radius:1em ;
+    
+}
+
+#txt2{
+    grid-area: txt2;
+    background-color: rgb(109, 101, 93);
+    margin-left: 1em;
+    border-bottom-right-radius:1em ;
+    border-bottom-left-radius:1em ;
+}
+.list-1 li {
+    margin-left: 3em;
+    margin-top: 20px;
+    list-style: none;
+}
+.list-2 li {
+    margin-left: 15em;
+    margin-top: 20px;
+    list-style: none;
+}
+
+li {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em
+
+}
+#foots{
+    background-color: cadetblue;
+    grid-area: foots;
+}
+
+
+footer img{
+    float: right;
+    width:25px;
+    height:25px;
+    padding: 5px;
+}
+
+.chcbtn{
+    color: rgb(236, 229, 229);
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+    position: relative;
+    right:2em;
+    top: 15px;
+}
+#checks{
+    float: right;
+    margin-left: 1em;
+    display: none;
+    
+}
+
+@media(max-width:700px){
+
+    .laygrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 1fr 50px 1fr 50px;
+        grid-template-areas: 
+        "heads"
+        "edu"
+        "txt"
+        "work"
+        "txt2"
+        "foots";
+    }
+
+    .chcbtn{
+        display: inline-block;
+    }
+    nav div a{
+        border: none;
+    }
+
+    .navig{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        left: 0em;
+        top: -800px;
+        text-align: center ;
+        order: 3;
+        color: blanchedalmond;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color:rgba(95, 158, 160, 0.801);
+        color: rgb(0, 0, 0);
+        transition: .3s;
+    }
+
+    #check:checked~.navig{
+         top: 21px;
+}
+}
+
+
+

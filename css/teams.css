@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+    grid-column-gap: 5px;
+    align-items:center;
+    grid-template-areas: 
+        "heads heads"
+        "grd1 grd2"
+        "grd3 grd4"
+        "grd5  grd6"
+        "foots foots";
+}
+
+#heads{
+    grid-area: heads;
+    background-color: cadetblue;
+}
+
+#grd1{
+    grid-area: grd1;
+    margin-left: 17em;
+  
+}
+#grd2{
+    grid-area: grd2;
+    margin-left: 10em;
+}
+#grd3{
+    grid-area: grd3;
+    margin-left: 17em;
+}
+#grd4{
+    grid-area: grd4;
+    margin-left: 10em;
+}
+#grd5{
+    grid-area: grd5;
+    margin-left: 17em;
+   
+}
+#grd6{
+    grid-area: grd6;
+    margin-left: 10em;
+}
+
+#foots{
+    grid-area: foots;
+    background-color:cadetblue;
+} 
+footer img{
+    float: right;
+    width:25px;
+    height:25px;
+    padding: 5px;
+}
+
+nav div a{
+    text-decoration: none;
+    color: rgb(7, 8, 8);
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
+}
+
+nav div a:hover {
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+nav div a.active{
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+
+div img{
+    width: 200px;
+    height:200px;
+    border-radius: 10em;
+}
+
+.flexer{
+    display: flex;
+}
+
+.flexer img{
+    width:30px;
+    height:30px;
+    margin: 3px;
+}
+
+img{
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+img:hover{
+    transform: scale(1.1);
+}
+body{
+    background-color:rgb(209, 215, 221);
+}
+
+
+@media(max-width: 660px){
+    .main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
+        grid-template-areas: 
+        "heads"
+        "grd1"
+        "grd2"
+        "grd3"
+        "grd4"
+        "grd5"
+        " grd6"
+        "foots";
+        width: 100vw;
+        grid-gap: 0;
+    }
+
+    #grd1{
+        margin: 3em;
+        
+    }
+
+    #grd3{
+        margin: 3em;
+    }
+
+    #grd5{
+        margin: 3em;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}

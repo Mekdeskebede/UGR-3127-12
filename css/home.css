@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+
+header{
+    background-image: url(../images/MyPost3.png);
+    height: 94vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.navig{
+    display: flex;
+    background-color: cadetblue;
+    height: 50px;
+}
+nav div a{
+    text-decoration: none;
+    color: rgb(7, 8, 8);
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: 0.8em;
+}
+
+nav div a:hover {
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+nav div a.active{
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+
+#txt{
+    position: relative;
+    top: 20em;
+    left: 0em;
+}
+
+header pre{
+    font-size: 1em;
+    
+}
+header pre em{
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+        
+}
+
+.logo{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 10px;
+    margin: 3px;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    margin-top: 1em;
+}
+footer{
+    height: 50px;
+    background-color: rgb(41, 110, 107);
+}
+.footer{
+    float: right;
+}
+
+footer img{
+    width:25px;
+    height:25px;
+}
+.checkbtn{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+    display: none;
+    position: relative;
+    right:7em;
+    top: 15px;
+}
+#check{
+    margin-left: 1em;
+    display: none;
+    
+}
+
+@media(max-width:700px){
+
+    .checkbtn{
+        display: inline-block;
+    }
+    nav div a{
+        border: none;
+    }
+    .navig{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    nav div a{
+        justify-content: space-around;
+        margin-bottom: 50px;
+        height: 100vh;
+        width: 100%;
+        top: -1000px;
+        text-align: center ;
+        z-index: 99; 
+        color: rgb(0, 0, 0);
+        transition: .3s;
+    }
+
+    #check:checked ~ nav div a{
+         top: 200px;
+}
+@media(max-width:600){
+    #txt{
+        position: fixed;
+        left: 0em;
+        text-align: start;
+    }
+}
+}
+
+    

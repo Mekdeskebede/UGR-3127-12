@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.griding{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px  300px 300px 300px 300px 50px;
+    grid-template-areas:
+    "heads"
+    "grd1"
+    "grd2"
+    "grd3"
+    "grd4"
+    "foots";
+    row-gap: 1em;
+}
+
+#heads{
+    grid-area: heads;
+    background-color: cadetblue;
+    grid-column-gap: 0;
+}
+
+.navig{
+    display: flex;   
+}
+nav div a{
+    text-decoration: none;
+    color: rgb(7, 8, 8);
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: 0.8em;
+}
+
+nav div a:hover {
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+nav div a.active{
+    background-color:rgb(5, 59, 61);
+    color: rgb(216, 208, 208);
+}
+
+#grd1{
+    display: flex;
+    justify-content: space-around;
+    grid-area: grd1;
+    background-color: rgb(238, 232, 232);
+    border-radius: 2em;
+}   
+
+#grd2{
+    display: flex;
+    justify-content: space-around;
+    grid-area: grd2;
+    background-color: rgb(238, 232, 232);
+    border-radius: 2em;
+}
+
+
+#grd3{ 
+    display: flex;
+    justify-content: space-around;
+    grid-area: grd3;
+    background-color: rgb(238, 232, 232);
+    border-radius: 2em;
+}
+
+
+#grd4 {
+    display: flex;
+    justify-content: space-around;
+    grid-area: grd4;
+    background-color: rgb(238, 232, 232); 
+    border-radius: 2em;
+}
+
+#foots{
+    grid-area: foots;
+    background-color: cadetblue;
+}
+
+p{
+    font-size: 1.5em;
+   
+}
+#grd1 img{
+    width: 500px;
+    height: 300px;
+}
+#grd2 img{
+    width: 500px;
+    height: 300px;
+}
+
+#grd3 img{
+    width: 500px;
+    height: 300px;
+
+}
+#grd4 img{
+    width: 500px;
+    height: 300px;
+ 
+}
+p em{
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+
+footer img{
+    float: right;
+    width:30px;
+    height:30px;
+    padding: 4px;
+}
+
+body{
+    background-color:rgb(209, 215, 221);
+}
+p{
+    padding: 2em;
+}
+
+.checkbtn{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 2em;
+    top: 15px;
+}
+#check{
+    display: none;    
+}
+
+@media(max-width:1042px){
+    .griding{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px;
+        grid-template-areas: 
+        "heads"
+        "grd1"
+        "grd2"
+        "grd3"
+        "grd4"
+        "foots";
+    }
+
+    #grd1{
+        flex-direction: column;
+        grid-area: grd1;
+    }
+
+    #grd2{
+        flex-direction: column;
+        grid-area: grd2;
+    
+    }
+    #grd3{
+        flex-direction: column;
+        grid-area: grd3;
+    }
+    #grd4{
+        flex-direction: column;
+        grid-area: grd4;
+        
+    }
+    
+    body{
+        overflow-x: hidden;
+    }
+   
+}
+@media(max-width:715px) {
+    
+    .checkbtn{
+        display: inline-block;
+    }
+    nav div a{
+        border: none;
+    }
+
+    .navig{
+        height: 100vh;
+        position: absolute;
+        top: -1000px;
+        width: 100%;
+        text-align: center;
+        order: 3;
+        color: blanchedalmond;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color:rgba(95, 158, 160, 0.836);
+        color: rgb(0, 0, 0);
+        transition: .3s;
+    }
+
+        #check:checked ~ .navig{
+            top: 50px;
+    }
+    
+}
